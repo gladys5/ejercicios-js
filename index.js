@@ -36,11 +36,11 @@
 //   return ar.reduce((a, b) => a + b)
 // }
 // // console.log(aVeryBigSum(ar))
-// let arr = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [9, 8, 9],
-// ]
+let arr = [
+  [7, 2, 3],
+  [4, 5, 6],
+  [9, 8, 9],
+]
 // function diagonalDifference(arr) {
 //   let n = arr.length
 //   let diagonalX = 0
@@ -49,9 +49,11 @@
 //     for (let j = 0; j < n; j++) {
 //       if (i === j) {
 //         diagonalX += arr[i][j]
+//         console.log(diagonalX)
 //       }
 //       if (i + j === n - 1) {
 //         diagonalY += arr[i][j]
+//         console.log(diagonalY)
 //       }
 //     }
 //   }
@@ -158,28 +160,15 @@ let a = [1, 2, 3, 2, 3, 6, 1, 10, 2, 3, 2, 3, 6, 1]
 //   return unique[0] 
 // }
 // console.log(elUnico(a))
-let array =[[1,2,3],[4,3,2],[8,9,0]]
-
-function matriz(array) {
-let diagonalI
-let diagonalD
-let tamanioMAtriz=array.length
-  for (let i = 0; i < array.length; i++) {
-  for (let j = 0; j < array.length; j++) {
-   if(array[i]<tamanioMAtriz+1){
-    diagonalD=array[i]+tamanioMAtriz+1
-    console.log(diagonalD)
-    return diagonalD
-    
-
-   }if (array[i] < tamanioMAtriz-1) {
-    diagonalI = array[i] + tamanioMAtriz + 1
-    console.log(diagonalI)
-    return diagonalI
+function h(arr) {
+  let derecha
+  for (let index = 0; index < arr.length; index++) {
+   if (arr[index]===arr.length[0]) {
+    derecha=arr[index]+=arr.length+1
+    console.log(derecha)
    }
-    
+     
   }
-    
-  }
+console.log(derecha) 
 }
-console.log(matriz(array))
+h(arr)
