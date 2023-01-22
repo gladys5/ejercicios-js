@@ -26,9 +26,23 @@ class Stack {
       this.top--
       //regresamos el valor eliminado
       return deletedData
+    }  
+  }
+  getsize(){
+    return this.top
+  }
+  isEmpty(){
+    if (!this.getsize()) {
+        return true
+        
+    }else{
+        return false
     }
   }
 }
 const stack = new Stack()
 stack.push("platillo #1")
-console.log(stack)
+stack.push("platillo #2")
+stack.push("platillo #3")
+//console.log(stack.pop())
+console.log(stack.getsize())

@@ -160,15 +160,70 @@ let a = [1, 2, 3, 2, 3, 6, 1, 10, 2, 3, 2, 3, 6, 1]
 //   return unique[0] 
 // }
 // console.log(elUnico(a))
-function h(arr) {
-  let derecha
-  for (let index = 0; index < arr.length; index++) {
-   if (arr[index]===arr.length[0]) {
-    derecha=arr[index]+=arr.length+1
-    console.log(derecha)
-   }
+// function h(arr) {
+//   let derecha
+//   for (let index = 0; index < arr.length; index++) {
+//    if (arr[index]===arr.length[0]) {
+//     derecha=arr[index]+=arr.length+1
+//     console.log(derecha)
+//    }
      
+//   }
+// console.log(derecha) 
+// }
+// console.log(h(arr))
+// function fib(n) {
+//   let f=[0,1]
+//   for (let index = 2; index < n; index++) {
+//     const element = f[index-1]+f[index-2];
+//     f.push(element)
+//   }
+//   return f
+// }
+// console.log(fib(9))
+// function fibonacciRecursive(n){
+// if(n==0){
+//   return 0
+// }
+// if(n==1){
+//   return 1
+// }
+// console.log( fibonacciRecursive(n-1)+fibonacciRecursive(n-2))
+// return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+// }
+// console.log(fibonacciRecursive(6))
+// function potencias(base,exponente) {
+//   for (let index = 1; index < exponente; index++) {
+    
+//    base = base*base;
+//     // console.log(base)
+//   }
+//   return base
+// }
+// console.log(potencias(4,4))
+
+// let memo =[]
+// function fiboRecursivoMemorizado(n,memo) {
+//   console.log(memo)
+//   if(memo[n]!==undefined){
+//     return memo[n]
+//   }if(n<=1){
+//     memo[n]=n
+//     return n
+//   }else{
+//     let result = fiboRecursivoMemorizado(n-1,memo)+fiboRecursivoMemorizado(n-2,memo)
+//     memo[n]=result
+//     return result
+//   }
+// }
+// console.log(fiboRecursivoMemorizado(50,memo))
+ let memo =[0,1]
+function linearFibo(n, memo) {
+
+  for (let index = 2; index <= n; index++) {
+  memo[index]=memo[index-2]+memo[index-1]
+    
   }
-console.log(derecha) 
+  return memo[n]
 }
-h(arr)
+console.log(linearFibo(50, memo))
