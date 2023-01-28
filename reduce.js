@@ -74,5 +74,7 @@ let indexacion = arrayObjetos.reduce(
   }),
   {}
 )
-  console.log(indexacion['peine']) 
+  //console.log(indexacion['peine']) 
+
+  //=================================================
 
