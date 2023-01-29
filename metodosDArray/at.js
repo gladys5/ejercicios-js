@@ -1,4 +1,4 @@
-//resive la posicion del array que queremos acceder
+//resive la posicion del array que queremos acceder asepta numeros negativos
 
 let arrayString = ["lola", "paco", "mayo", "tapo"]
 let arrayNumeros = [2, 3, 4, 5, 562, 3, 9, 1, 0]
