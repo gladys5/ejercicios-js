@@ -15,4 +15,4 @@ let productos = [
 let metodoSplice = productos.splice(2, 0, ["silla"])
 //console.log(metodoSplice)
 console.log(productos)
-//splice resive 3 parametros 1.la pocicion en la que se insertara el elemento,2.apartir de que posicion se eliminara la cadena o array,3.el elemento que se insertara
+//splice resive 3 parametros 1.la pocicion en la que se insertara el elemento,2.apartir de que posicion se eliminara array,3.el elemento que se insertara
