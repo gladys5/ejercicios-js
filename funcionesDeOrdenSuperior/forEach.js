@@ -12,7 +12,7 @@ let productos = [
 //forEach resive 3 valores y returna un undefined
 let valorBuscado="peine"
    function descuento() {
-    let descuento 
+    
      productos.forEach(function (valor, indice) {
        let desestructurar = valor.articulo
        if (desestructurar === valorBuscado) {
@@ -24,3 +24,11 @@ let valorBuscado="peine"
 
    }
 descuento(productos,valorBuscado)
+function indexandoObjetos() {
+  let inprimir
+  productos.forEach((elemento, indice) => {
+console.log(elemento,indice)
+  })
+  
+}
+indexandoObjetos(productos)
