@@ -226,4 +226,4 @@ function linearFibo(n, memo) {
   }
   return memo[n]
 }
-console.log(linearFibo(50, memo))
+console.log(linearFibo(1, memo))

@@ -1,5 +1,5 @@
 //Fila es una secuencia de elementos en la que la operacion  de insercion (enqueue)se realiza por un extremo y la operacion de extracion (dequeue)por el otro FIFO 
-
+//cola
 class Queue {
   constructor() {
     this.items = {}
@@ -7,11 +7,13 @@ class Queue {
     this.end = 0
   }
   //  La funcion enqueue se encarga de resivir valores e introducirlos dentro de el objeto items,require resivir un paramentro que es  el del valor  que se introducira  ala fila
+  //poner en cola
   enqueue(data) {
     this.items[this.end] = data
     this.end++
   }
   // dequeue no resive parametros permite eliminar valores o sacar valores de la fila
+ //sacar d la cola
   dequeue() {
     //revisa si la fila esta vacia retorna null
 
