@@ -11,13 +11,34 @@ constructor(data,next,prev){
 
 }
 
-class DobleLinkedList {
+class DoubleLinkedList {
   constructor() {
     //este constructor no resive parametros pero inicializamos dentro de este la cabeza(que es el primer elemento de la lista), cola(el ultimo elemento de la lista) y tamanio(que es la cantidad total de posiciones en la lista)
+    //mientras la lista este vacia this.head y tail apuntaran a null mientras que size a puntara a 0
     this.head = null
     this.tail = null
     this.size = 0
   }
+  //agregamos informacion a la cabeza
+  addToHead(data) {
+    //hacemos una instancia a nuestra clase nodo para obtener sus referencias data(el valor que aqui agregaremos) y head(el inicio de la lsita)como no requerimos la cola nuestro ultima referencia apunta a nulo esto es necesario para evitar esperar esta referencia
+    const newNode = new Node(data, this.head, null)
+    if (this.head) {
+        //la referencia al nodo siguiente del nodo que acabamos de crear va a serla cabeza
+        newNode.next = this.head
+        //el valor anterior a la cabeza es igual al nuevo nodo
+        this.prev = newNode
+        //la cabeza de nuestra lista enlaza ya no va a ser la cabeza anterior si no que sera el nuevo nodo que acabamos de crear
+        this.head =newNode
+    }else{
+      //cuando solo tengamos un valor la cabeza como la cola apuntara al mismo nodo
+      this.head = newNode
+      this.tail = newNode
+    }
+    //al final ingrementamos el tamanio de nuestra lista
+    this.size++
+  }
+
   //funcion que imprima desde la cabeza a la cola de la lista
   print() {
     //guardamos el valor actual
@@ -44,11 +65,19 @@ class DobleLinkedList {
     //mientras haya un valor actual
     while (current) {
       //resultado guardara el valor que este guardado en el nodo actual le agregamos la flecha en string para representar la secuencia
-      result += current.data + '<->'
+      result += current.data + "<->"
       //nos movemos al nodo anterior
-      current=current.prev
+      current = current.prev
     }
     // devolvemos el resultado indicando que ya no hay valores con una X
-    return result += 'X'
+    return (result += "X")
   }
 }
+
+
+
+const doubleLinkedList = new DoubleLinkedList()
+doubleLinkedList.addToHead(3)
+
+
+console.log(doubleLinkedList.print())
