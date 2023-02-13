@@ -243,3 +243,5 @@ console.log(doubleLinkedList.removeFromTail())
 
 console.log(doubleLinkedList.print())
 console.log(doubleLinkedList.reversePrint())
+console.log(doubleLinkedList.isEmpty())
+console.log(doubleLinkedList.getSize())
